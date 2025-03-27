@@ -1,9 +1,11 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { useSearchParams } from 'next/navigation';
 
 export default function Search({ placeholder }: { placeholder: string }) {
-
+  const searchParams = useSearchParams();
+  
   const handleInput = (value: string) => {
     // Handle the input value here
     console.log(value);
