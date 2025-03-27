@@ -5,10 +5,10 @@ import { useSearchParams } from 'next/navigation';
 
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
-  
+
   const handleInput = (value: string) => {
-    // Handle the input value here
-    console.log(value);
+    const params = new URLSearchParams(searchParams);
+    console.log(params);
   }
 
   return (
