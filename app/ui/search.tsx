@@ -11,9 +11,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const handleInput = (value: string) => {
     const params = new URLSearchParams(searchParams);
     if (value) {
-      params.set('search', value);
+      params.set('query', value);
     } else {
-      params.delete('search');
+      params.delete('query');
     }
 
     replace(`${pathname}?${params.toString()}`);
